@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.App{
+  margin-left:16rem;
+  z-index: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.first-heading{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+}
+
+.sec-heading{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+}
+
+.third-heading{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.fourth-heading{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.fifth-heading{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.fifth-heading{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.sixth-heading{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+
+.paragraph-large{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.para-small{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.text-small{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+:root{
+  --primary:#FCF9EA;
+  --secondary:#49BEB7;
+  --third:#BADFDB;
+  --fourth:#FF8A5C;
+  --background:#FFFFFF;
+}
+
+
+
+@media (max-width:992px )and ( min-width :450px ){
+  .App{
+    margin-left: 0rem;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .first-heading{
+    font-size: 42px;
+    line-height: 48px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sec-heading{
+    font-size:30px
   }
+
+  .third-heading{
+    font-size: 24px;
+  }
+
+  .fourth-heading{
+    font-style: 20px;
+  }
+
+  .fifth-heading{
+    font-style: 18px;
+  }
+
+  .sixth-heading{
+    font-size:16px
+  }
+
+  .paragraph-large{
+    font-size: 14px;
+  }
+
+  .para-small{
+    font-size: 12px;
+  }
+
+  
+}
+
+@media (max-width:450px ){
+  .App{
+    margin-left: 0rem;
+  }
+
+  .first-heading{
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .sec-heading{
+    font-size:26px
+  }
+
+  .third-heading{
+    font-size: 20px;
+  }
+
+  .fourth-heading{
+    font-style: 18px;
+  }
+
+  .fifth-heading{
+    font-style: 16px;
+  }
+
+  .sixth-heading{
+    font-size:12px
+  }
+
+  .paragraph-large{
+    font-size: 14px;
+  }
+
+  .para-small{
+    font-size: 12px;
+  }
+
+  
 }

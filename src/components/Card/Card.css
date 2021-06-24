@@ -1,0 +1,9 @@
+.card-item{
+    padding: 20px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    /* border: 2px solid var(--third   ); */
+    box-shadow: 0 2px 16px var(--third);
+    width: 80%;
+    margin-bottom: 20px;
+}   

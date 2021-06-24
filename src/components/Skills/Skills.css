@@ -1,0 +1,36 @@
+.skills-container{
+    padding: 40px 60px;
+    background-color: var(--background);
+    
+}
+
+.skill-main-heading{
+    text-align: center;
+    color: var(--secondary);
+    margin-bottom: 50px;
+    
+}
+
+.skills-hr{
+    
+    margin-bottom: 5rem;
+    border-width: 4px;
+    background-color: var(--third);
+
+}
+
+
+
+.skill-card-wrapper{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.card-heading{
+    font-family: 'Fira Sans',sans-serif;
+    color: var(--secondary);
+    margin-bottom: 30px;
+
+}

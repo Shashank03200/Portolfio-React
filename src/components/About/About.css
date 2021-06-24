@@ -1,0 +1,150 @@
+.about-div{
+    height: 100vh;
+    padding: 40px 60px !important;
+    display: grid;
+    row-gap: 30px;
+    background-color: var(--primary);
+    position: relative;
+}
+
+.about-second{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    column-gap: 50px;
+}
+
+.heading-about-me{
+    color: var(--secondary);
+    font-family: 'Fira Sans', sans-serif;
+    margin-bottom: 20px;
+    
+}
+
+.main-heading{
+    font-size: 34px;
+}
+
+
+.about-me-div, .hobbies, .education {
+    padding: 24px !important;
+    background-color: #FFF8CD;
+    border-radius: 10px;
+    
+} 
+
+.sidebar-hr{
+    background-color: var(--third);
+    border-width: 2px;
+    margin-bottom: 30px;
+}
+
+.about-list{
+    list-style: none;
+}
+
+.about-list li{
+    padding: 5px 0px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 28px;
+    color: var(--fourth);
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline{
+    width: 100%;
+    height: auto;
+    
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul{
+    list-style: none;
+}
+
+.timeline ul li{
+    width: 40%;
+    padding: 8px;
+    position: relative;
+    background-color: var(--secondary);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.timeline ul li:last-child{
+    margin-bottom: 0;
+}
+
+.timeline ul li p{
+    margin-bottom: 0;
+    font-family: 'Fira Sans', 'Roboto';
+}
+
+
+
+@media only screen and (min-width: 992px){
+
+    .timeline::before{
+        content:"";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--fourth);
+    }
+
+    .timeline ul li{
+        width: 40%;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .timeline ul li:nth-child(odd){
+        float: left;
+        clear:right;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear:left;
+        border-radius: 0px 10px 10px 0;
+
+    }
+
+
+    .timeline ul li::after{
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color:black;
+        border-radius: 50%;
+        top: 0;
+    }
+
+    .timeline ul li:nth-child(odd)::after {
+        position: absolute;
+        position: absolute;
+        right: -30%;
+        top: 50%;
+      }
+
+      .timeline ul li:nth-child(even)::after {
+        position: absolute;
+        left: -30%;
+        top: 50%;
+      }
+
+    .timeline ul li:hover::after{
+        background-color: var(--secondary);
+    }
+}
+

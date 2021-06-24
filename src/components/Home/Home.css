@@ -1,0 +1,39 @@
+.home-div{
+    background-color: #000;
+    font-family: 'Fira Sans', sans-serif;
+    position: relative;
+    height: 100vh;
+    padding:140px 40px 200px 100px;
+    overflow: hidden;
+}    
+
+.home-text{
+    margin-top: 100px;
+}
+
+
+.home-text-name{
+    font-size: 84px;
+    line-height: 90px;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.home-profession{
+    color: var(--primary);
+    font-size: 36px;
+}
+
+.home-profession span{
+    font-size: 38px;
+}
+
+.profile-image{
+    position: absolute; 
+    right: -100px;
+    bottom: 0;
+    width: 600px;
+    height: 750px;
+    object-fit: contain;
+}
+
