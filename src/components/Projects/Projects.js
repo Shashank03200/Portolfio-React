@@ -36,19 +36,21 @@ const Projects = () => {
             {!isOverlay &&
                 <div className="project-container skills-container">
 
-                    <h2 className="primary-heading sec-heading  project-heading" >
+                    <h1 className="primary-heading sec-heading  project-heading" >
                         My Projects
-                    </h2>
+                    </h1>
 
-                    <div className="project-card-wrapper">
+                    <div className="row justify-content-center">
 
                         {
-                            projectList.map(project => (
-                                <ProjectCard project={project} />
+                            projectList.map((project, index) => (
+                                <ProjectCard key={index} project={project} />
+
                             ))
                         }
 
                     </div>
+
                 </div>
             }
 

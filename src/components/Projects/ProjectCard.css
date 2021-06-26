@@ -1,15 +1,10 @@
 
 .project-card{
-    padding: 20px;
     background-color: var(--primary);
+    border: 2px solid var(--third   );
+    min-height: 450px;
+    max-width: 340px;
     border-radius: 10px;
-/* border: 2px solid var(--third   ); */
-    box-shadow: 0 2px 16px var(--third);
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-rows: 0.55fr 0.45fr;
-    padding: 0;
-    
 }
 
 .card-top{

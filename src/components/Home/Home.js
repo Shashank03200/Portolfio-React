@@ -8,30 +8,44 @@ const Home = () => {
 
 
     const [isOverlay, setIsOverlay] = useState(true);
+    const [isScreenSmaller, setIsScreenSmaller] = useState(window.innerWidth < 763)
     const overlayClasses = ["overlay"];
 
     useEffect(() => {
         setTimeout(() => {
             setIsOverlay(false);
         }, 500)
-
-
     }, [])
+
+    useEffect(() => {
+        window.addEventListener("resize", windowResizeHandler);
+        return () => window.removeEventListener("resize", windowResizeHandler);
+    });
 
     if (!isOverlay)
         overlayClasses.push("overlay-close");
+
+    const windowResizeHandler = () => {
+        setIsScreenSmaller(window.innerWidth < 763)
+    }
+    console.log(isScreenSmaller)
+
+
 
 
     return (
         <Fragment>
 
             <div className={overlayClasses.join(" ")}>
-                <img src={HomeOverlay} className="overlay-image" />
+                <img src={HomeOverlay} className="overlay-image img-fluid" />
             </div>
 
             {!isOverlay &&
                 <div class="home-div">
-                    <div class="home-text">
+
+                    {setIsScreenSmaller && <img src={Profile} className="profile-image" alt="hero-image" />}
+
+                    <div className="home-text">
 
                         <div className="home-text-name">
                             Shashank Mishra
@@ -41,7 +55,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <img src={Profile} className="profile-image" alt="hero-image" />
+                    {!setIsScreenSmaller && <img src={Profile} className="profile-image" alt="hero-image" />}
 
                 </div>
             }

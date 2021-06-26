@@ -1,17 +1,21 @@
-.project-card-wrapper{
-    display: grid;
-    grid-template-columns: 0.34fr 0.33fr 0.33fr;
-    align-self: center;
-    column-gap: 50px;
-    row-gap: 40px;
-}
-
-
 .project-container{
     padding: 40px 60px;
+    background-color: var(--background);
 }
 .project-heading{
     text-align: center;
     color: var(--secondary);
     margin-bottom: 50px;
+}
+
+.project-col{
+    max-width: 400px;
+
+}
+
+@media screen and (max-width:450px){
+    .project-container{
+        padding: 30px 14px;
+        
+    }
 }

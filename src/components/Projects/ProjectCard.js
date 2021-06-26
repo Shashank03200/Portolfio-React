@@ -14,27 +14,26 @@ const ProjectCard = ({ project }) => {
     const mouseOutHandler = () => {
         setIsHovering(false);
     }
-
-    console.log(image)
-
     console.log(isHovering)
+
     return (
-        <div className="project-card" >
-            <div className="card-top" >
+        <div className="col-sm-6 col-xs-12 col-md-6 col-xl-3 col-lg-6 project-col mb-xs-5  p-0 mx-4 mb-sm-5 my-4 project-card  ">
+
+            <div className="card-top"  >
                 <img src={`${process.env.PUBLIC_URL}/assets/image/${image}`} className="project-image" />
 
             </div>
-            <div className="card-bottom" onMouseOver={mouseOverHandler} onMouseOut={mouseOutHandler} >
+            <div className="card-bottom"  >
                 <div className="project-title fifth-heading ">
                     {title}
                 </div>
-                <div className="project-desc sixth-heading">
+                <div className="project-desc paragraph-large">
                     {desc}
                 </div>
                 <div className={`project-div-overlay ${isHovering ? 'project-div-overlay-true' : ''}`}></div>
             </div>
-
         </div>
+
     );
 }
 

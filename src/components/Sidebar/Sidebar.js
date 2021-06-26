@@ -21,7 +21,7 @@ const Sidebar = () => {
                         <NavLink to="/contact"><li className="paragraph-large"><i className="bi bi-link"></i>Contact Me</li></NavLink>
                     </ul>
                 </div>
-                <Button variant="success" className="fifth-heading sidebar-download-button"><i className="bi bi-download"></i>  &nbsp; Download CV   </Button >
+                <Button variant="info" className="fifth-heading sidebar-download-button"><i className="bi bi-download"></i>  &nbsp; Download CV   </Button >
             </nav>
         </div>
     );

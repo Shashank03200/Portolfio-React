@@ -1,42 +1,23 @@
 .about-div{
+    padding: 40px 60px;
     height: 100vh;
-    padding: 40px 60px !important;
-    display: grid;
-    row-gap: 30px;
-    background-color: var(--primary);
-    position: relative;
+    background-color: var(--background); 
 }
 
-.about-second{
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    column-gap: 50px;
-}
 
 .heading-about-me{
     color: var(--secondary);
-    font-family: 'Fira Sans', sans-serif;
-    margin-bottom: 20px;
-    
 }
 
-.main-heading{
-    font-size: 34px;
-}
+
 
 
 .about-me-div, .hobbies, .education {
     padding: 24px !important;
-    background-color: #FFF8CD;
-    border-radius: 10px;
-    
+    background-color:var(--primary);
+    border-radius: 10px;   
 } 
 
-.sidebar-hr{
-    background-color: var(--third);
-    border-width: 2px;
-    margin-bottom: 30px;
-}
 
 .about-list{
     list-style: none;
@@ -49,7 +30,7 @@
     color: var(--fourth);
 }
 
-.container{
+.container-timeline{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -86,7 +67,11 @@
     font-family: 'Fira Sans', 'Roboto';
 }
 
-
+@media only screen and (min-width: 768px){
+    .hobbies{
+        min-height: 100%;
+    }
+}
 
 @media only screen and (min-width: 992px){
 
@@ -125,7 +110,7 @@
         position: absolute;
         height: 20px;
         width: 20px;
-        background-color:black;
+        background-color:var(--third);
         border-radius: 50%;
         top: 0;
     }
@@ -148,3 +133,20 @@
     }
 }
 
+
+@media screen and (max-width:763px){
+    .about-me-div, .hobbies, .education {
+        width: 100% !important;
+    }
+
+    .about-div{
+        padding: 30px 5px;
+    }
+}
+
+@media screen and  (max-width: 992px){
+    .timeline ul li{
+        margin:10px auto;
+        width: 90%;
+    }
+}

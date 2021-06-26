@@ -13,7 +13,7 @@
     border-right: 2px solid var(--third);
 }
 
-@media (max-width:992px) {
+@media (max-width:1200px) {
     .sidebar-div{
      visibility: hidden;
     }
@@ -102,8 +102,7 @@
     bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--secondary) !important;
-    color: #D8E3E7 !important;
+
 }
 
 @media screen and (max-height: 600px) {

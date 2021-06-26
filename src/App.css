@@ -12,115 +12,112 @@
 }
 
 .first-heading{
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 52px;
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 48px !important;
+  line-height: 52px !important;
 }
 
 .sec-heading{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
-  font-size: 34px;
+  font-size: 34px !important;
 }
 
 .third-heading{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 28px !important;
 }
 
 .fourth-heading{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 24px !important;
 }
 
 .fifth-heading{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 20px !important;
 }
 
 .fifth-heading{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 .sixth-heading{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 
 
 .paragraph-large{
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: 400;
 }
 
 .para-small{
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: 400;
 }
 
 .text-small{
   font-family: 'Open Sans', sans-serif;
-  font-size: 10px;
+  font-size: 10px !important;
   font-weight: 400;
 }
 
 :root{
-  --primary:#FCF9EA;
+  --primary:#000000;
   --secondary:#49BEB7;
   --third:#BADFDB;
   --fourth:#FF8A5C;
-  --background:#FFFFFF;
+  --background:#171717;
 }
 
-
-
-@media (max-width:992px )and ( min-width :450px ){
+@media screen and (max-width:1200px) {
   .App{
     margin-left: 0rem;
   }
+  
+}
+
+@media (max-width:992px )and ( min-width :450px ){
+  
 
   .first-heading{
-    font-size: 42px;
-    line-height: 48px;
+    font-size: 42px !important;
+    line-height: 48px !important;
   }
 
   .sec-heading{
-    font-size:30px
+    font-size:30px !important;
   }
 
   .third-heading{
-    font-size: 24px;
+    font-size: 24px !important;
   }
 
   .fourth-heading{
-    font-style: 20px;
+    font-size: 20px !important;
   }
 
   .fifth-heading{
-    font-style: 18px;
+    font-size: 18px !important;
   }
 
   .sixth-heading{
-    font-size:16px
+    font-size:16px !important;
   }
 
-  .paragraph-large{
-    font-size: 14px;
-  }
 
-  .para-small{
-    font-size: 12px;
-  }
 
   
 }
@@ -131,36 +128,32 @@
   }
 
   .first-heading{
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 36px !important;
+    line-height: 40px !important;
   }
 
   .sec-heading{
-    font-size:26px
+    font-size:26px !important;
   }
 
   .third-heading{
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .fourth-heading{
-    font-style: 18px;
+    font-size: 18px !important;
   }
 
-  .fifth-heading{
-    font-style: 16px;
-  }
+ 
 
   .sixth-heading{
-    font-size:12px
+    font-size:12px !important;
   }
 
-  .paragraph-large{
-    font-size: 14px;
-  }
+ 
 
-  .para-small{
-    font-size: 12px;
+  .container{
+    width: 100% !important;
   }
 
   
