@@ -2,31 +2,29 @@
     padding: 40px 20px 20px 20px;
     height: 100%;
     position: fixed;
+    width: 280px;
+    
      /* position: sticky; */
     /* position: -webkit-sticky; */ 
     left: 0 ;
     top: 0;
-    z-index: 1;
-    border-right: 2px solid var(--secondary);
+    z-index: 2;
+    /* border-right: 2px solid var(--secondary); */
     background-color: var(--primary);
     color: var(--fourth);
     border-right: 2px solid var(--third);
 }
 
-@media (max-width:1200px) {
-    .sidebar-div{
-     visibility: hidden;
-    }
-    
-}
+
 .sidebar-avatar{
     margin: 20px 0 30px 0;
     text-align: center;
 }
 
 .sidebar-profile-name{
-    text-align: center;
+    text-align: center !important;
     color: var(--secondary);
+    cursor: pointer;
     /* border-top: 3px groove var(--third); */
     /* border-bottom: 3px groove var(--third); */
 }
@@ -64,11 +62,6 @@
     /* border-right: 4px solid var(--secondary); */
 }
 
-/* @keyframes shrink-highlight{
-    50%{
-
-    }
-} */
 
 
 .sidebar-list img{
@@ -109,4 +102,78 @@
         .sidebar-download-button{
             display: none;
         }
+} 
+
+@media screen and (max-width: 1300px){
+    .sidebar-profile-name{
+        font-size: 40px !important;
+    }
 }
+
+
+
+
+
+
+
+@media (max-width: 992px){
+    .mobileMenu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translateX(-100%);
+        width: 400px;
+        height: 100%;
+        transition: all ease 0.25s;
+    }
+    
+    .mobileMenu.Open{
+        transform: translateX(0);
+    }
+    .navbar{
+        background-color: transparent !important;
+        
+    }
+
+
+
+    .navbar-brand{
+        display: none;
+    }
+
+
+    .sidebar-div{
+        border: none;
+        width: auto;
+    }
+
+    .overlay-home{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        margin: auto;
+        background-color: rgba(0,0,0,0.6);
+        display: none;
+        
+    }
+
+    .overlay-home.open{
+        display: block;
+    }
+}
+
+@media (max-width:450px){
+    .navbar-toggler{
+        position: absolute !important;
+        top: 26px;
+
+    }
+
+    .mobileMenu{
+        width: 250px;
+    }
+}
+

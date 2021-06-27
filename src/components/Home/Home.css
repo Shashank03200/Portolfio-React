@@ -4,7 +4,7 @@
     position: relative;
     height: 100vh;
     padding:140px 40px 200px 100px;
-    
+    overflow-x: hidden;
 }    
 
 .home-text{
@@ -40,7 +40,7 @@
 
 .profile-image{
     position: absolute; 
-    right: -5%;
+    right: -10%;
     bottom: 0;
     width: 50%;
     height: 100%;
@@ -94,7 +94,9 @@
 
     .home-div{
         padding:60px 40px;
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         
     }
 

@@ -5,7 +5,9 @@ import { backend, frontend, library, programming, tools } from './SkillData';
 import Container from 'react-bootstrap/Container'
 import { useState, useEffect, Fragment } from 'react';
 import SkillsOverlay from '../../assets/svg/projects1.svg';
+import '../MenuIcon/HamburgerIcon';
 import '../../Overlay.css'
+
 
 
 const Skills = () => {

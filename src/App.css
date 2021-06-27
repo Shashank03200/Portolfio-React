@@ -7,9 +7,17 @@
 
 
 .App{
-  margin-left:16rem;
+  background-color: var(--background);
   z-index: 0;
 }
+
+.content{
+  margin-left:16rem;
+  position: relative;
+  overflow:auto;
+  z-index: 1;
+}
+
 
 .first-heading{
   font-family: 'Fira Sans', sans-serif !important;
@@ -82,7 +90,7 @@
   --background:#171717;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:768px) {
   .App{
     margin-left: 0rem;
   }
@@ -123,10 +131,7 @@
 }
 
 @media (max-width:450px ){
-  .App{
-    margin-left: 0rem;
-  }
-
+  
   .first-heading{
     font-size: 36px !important;
     line-height: 40px !important;
@@ -144,17 +149,20 @@
     font-size: 18px !important;
   }
 
- 
-
   .sixth-heading{
     font-size:12px !important;
   }
-
- 
 
   .container{
     width: 100% !important;
   }
 
   
+}
+
+@media screen and (max-width:992px) {
+  .content{
+    margin-left: 0;
+    z-index:0;
+  }
 }

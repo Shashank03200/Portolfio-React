@@ -41,7 +41,7 @@ const Home = () => {
             </div>
 
             {!isOverlay &&
-                <div class="home-div">
+                <div className="home-div">
 
                     {setIsScreenSmaller && <img src={Profile} className="profile-image" alt="hero-image" />}
 
@@ -60,7 +60,7 @@ const Home = () => {
                 </div>
             }
 
-        </Fragment>
+        </Fragment >
 
     );
 }
