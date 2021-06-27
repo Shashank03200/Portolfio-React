@@ -19,7 +19,7 @@ function App() {
     <Suspense fallback={<p>Loading.. </p>}>
       <div className="App">
         <Sidebar />
-        <div class="content">
+        <div className="content">
           <Switch>
 
             <Route path="/aboutme">

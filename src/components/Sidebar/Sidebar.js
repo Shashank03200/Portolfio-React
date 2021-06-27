@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import AvatarImage from '../../assets/image/profile-image.png'
 import { Button } from 'react-bootstrap';
 
 import './Sidebar.css';

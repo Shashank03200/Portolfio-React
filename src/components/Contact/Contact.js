@@ -37,11 +37,11 @@ const Contact = () => {
 
 
                         <div className="row d-flex justify-content-around links-wrapper">
-                            <a href="https://www.linkedin.com/in/shashank03210/" target="_blank"><i class="bi bi-linkedin" style={{ color: '#0a66c2' }}></i></a>
-                            <a href="https://www.facebook.com/profile.php?id=100035680878054" target="_blank"><i class="bi bi-facebook" style={{ color: '#3b5998' }}></i></a>
-                            <a href="https://twitter.com/imShashank___" target="_blank"><i class="bi bi-twitter" style={{ color: '#1da1f2' }}></i></a>
-                            <a href="mailto:shashank032000@gmail.com" target="_blank"><i class="bi bi-google" style={{ color: '#ea4335' }}></i></a>
-                            <a href="https://www.instagram.com/shashank0320/" target="_blank"><i class="bi bi-instagram" style={{ color: '#c32aa3' }}></i></a>
+                            <a href="https://www.linkedin.com/in/shashank03210/" target="_blank" rel="noreferrer"><i class="bi bi-linkedin" style={{ color: '#0a66c2' }}></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100035680878054" target="_blank" rel="noreferrer"><i class="bi bi-facebook" style={{ color: '#3b5998' }}></i></a>
+                            <a href="https://twitter.com/imShashank___" target="_blank" rel="noreferrer"><i class="bi bi-twitter" style={{ color: '#1da1f2' }}></i></a>
+                            <a href="mailto:shashank032000@gmail.com" target="_blank" rel="noreferrer"><i class="bi bi-google" style={{ color: '#ea4335' }}></i></a>
+                            <a href="https://www.instagram.com/shashank0320/" target="_blank" rel="noreferrer"><i class="bi bi-instagram" style={{ color: '#c32aa3' }}></i></a>
 
                         </div>
                         <div className="form-wrapper">

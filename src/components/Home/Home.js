@@ -1,5 +1,5 @@
 import './Home.css';
-import Profile from '../../assets/image/robert.png';
+
 import { Fragment, useState, useEffect } from 'react';
 import HomeOverlay from '../../assets/svg/home.svg'
 import '../../Overlay.css'
@@ -28,7 +28,7 @@ const Home = () => {
     const windowResizeHandler = () => {
         setIsScreenSmaller(window.innerWidth < 763)
     }
-    console.log(isScreenSmaller)
+    // console.log(isScreenSmaller)
 
 
 
@@ -43,7 +43,7 @@ const Home = () => {
             {!isOverlay &&
                 <div className="home-div">
 
-                    {setIsScreenSmaller && <img src={Profile} className="profile-image" alt="hero-image" />}
+                    {setIsScreenSmaller && <img src={`${process.env.PUBLIC_URL}/assets/image/robert.png`} className="profile-image" alt="hero-image" />}
 
                     <div className="home-text">
 
@@ -55,7 +55,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    {!setIsScreenSmaller && <img src={Profile} className="profile-image" alt="hero-image" />}
+                    {!setIsScreenSmaller && <img src={`${process.env.PUBLIC_URL}/assets/image/robert.png`} alt="hero-image" />}
 
                 </div>
             }
