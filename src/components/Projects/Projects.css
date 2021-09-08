@@ -1,0 +1,21 @@
+.project-container{
+    padding: 40px 60px;
+    background-color: var(--background);
+}
+.project-heading{
+    text-align: center;
+    color: var(--secondary);
+    margin-bottom: 50px;
+}
+
+.project-col{
+    max-width: 400px;
+
+}
+
+@media screen and (max-width:450px){
+    .project-container{
+        padding: 45px 14px;
+        
+    }
+}

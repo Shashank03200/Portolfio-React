@@ -1,0 +1,68 @@
+
+.project-card{
+    background-color: var(--primary);
+    border: 2px solid var(--third   );
+    min-height: 450px;
+    max-width: 340px;
+    border-radius: 10px;
+}
+
+.card-top{
+    position: relative;;
+    padding: 5px;
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+.project-image{
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+    margin: 10px auto;
+    height: 100%;
+    min-height: 180px;
+    max-height: 200px;
+    transition:all 0.4s ease-in;z-index: -1;
+}
+
+.project-image:hover{
+    transform: scale(1.2);
+    
+}
+
+.card-bottom{
+    padding: 14px;
+}
+
+.project-title{
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--secondary);
+}
+
+.project-desc{
+    font-family: 'Fira Sans';
+    font-size: 15px;
+    text-align: justify;
+    color:var(--fourth);
+}
+
+.project-div-overlay{
+    
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    width: 100%;
+    transform: rotate(180deg);
+    /* transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+}
+
+.project-div-overlay-true{
+    transition: height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+
+} 
+

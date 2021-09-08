@@ -1,0 +1,160 @@
+.about-div{
+    padding: 40px 60px;
+   
+    background-color: var(--background); 
+}
+
+
+.heading-about-me{
+    color: var(--secondary);
+    margin-bottom: 50px;
+}
+
+
+
+.about-me-div, .hobbies, .education {
+    padding: 24px !important;
+    background-color:var(--primary);
+    border-radius: 10px;   
+} 
+
+
+.about-list{
+    list-style: none;
+}
+
+.about-list li{
+    padding: 5px 0px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 28px;
+    color: var(--fourth);
+}
+
+.container-timeline{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline{
+    width: 100%;
+    height: auto;
+    
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul{
+    list-style: none;
+}
+
+.divider-line{
+    border: 0.1px solid var(--secondary);
+    opacity: 0.5;
+    width: 100%;
+    margin: 10px auto;
+    
+}
+
+.timeline ul li{
+    width: 40%;
+    padding: 8px;
+    position: relative;
+    background-color: var(--secondary);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.timeline ul li:last-child{
+    margin-bottom: 0;
+}
+
+.timeline ul li p{
+    margin-bottom: 0;
+    font-family: 'Fira Sans', 'Roboto';
+}
+
+@media only screen and (min-width: 768px){
+    .hobbies{
+        min-height: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px){
+
+    .timeline::before{
+        content:"";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--fourth);
+    }
+
+    .timeline ul li{
+        width: 40%;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .timeline ul li:nth-child(odd){
+        float: left;
+        clear:right;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear:left;
+        border-radius: 0px 10px 10px 0;
+
+    }
+
+
+    .timeline ul li::after{
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color:var(--third);
+        border-radius: 50%;
+        top: 0;
+    }
+
+    .timeline ul li:nth-child(odd)::after {
+        position: absolute;
+        position: absolute;
+        right: -30%;
+        top: 50%;
+      }
+
+      .timeline ul li:nth-child(even)::after {
+        position: absolute;
+        left: -30%;
+        top: 50%;
+      }
+
+    .timeline ul li:hover::after{
+        background-color: var(--secondary);
+    }
+}
+
+
+@media screen and (max-width:763px){
+    .about-me-div, .hobbies, .education {
+        width: 100% !important;
+    }
+
+    .about-div{
+        padding: 45px 5px;
+    }
+}
+
+@media screen and  (max-width: 992px){
+    .timeline ul li{
+        margin:10px auto;
+        width: 90%;
+    }
+}

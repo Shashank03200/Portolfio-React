@@ -1,0 +1,27 @@
+.skills-container{
+    padding: 40px 60px;
+    background-color: var(--background);
+}
+
+.skill-main-heading{
+    color: var(--secondary);
+    margin-bottom: 50px;
+    
+}
+
+
+.card-heading{
+    color: var(--secondary);
+}
+
+@media screen and (max-width:768px ) and (min-width:200px){
+    .skills-container{
+        padding: 45px 20px;
+    }
+}
+
+@media screen and (max-width:992px) and (min-width:768px){
+    .skills-container{
+        padding: 30px 2px;
+    }
+}
