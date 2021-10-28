@@ -1,8 +1,6 @@
 import "./Home.css";
 
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useRef, useState, useEffect } from "react";
 import HomeOverlay from "../../assets/svg/home.svg";
 import "../../Overlay.css";
 
@@ -12,12 +10,28 @@ const Home = () => {
     window.innerWidth < 763
   );
   const overlayClasses = ["overlay"];
+  const counter = useRef(0);
 
-  useEffect(() => {
-    setTimeout(() => {
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsOverlay(false);
+  //   }, 500);
+  // }, []);
+
+  // // useEffect(() => {
+  // //     setTimeout(() => {
+  // //         setIsOverlay(false);
+  // //     }, 500)
+  // // }, [])
+
+  if (!isOverlay) overlayClasses.push("overlay-close");
+
+  const imageLoadHandler = () => {
+    counter.current += 1;
+    if (counter.current >= 1) {
       setIsOverlay(false);
-    }, 500);
-  }, []);
+    }
+  };
 
   useEffect(() => {
     window.addEventListener("resize", windowResizeHandler);
@@ -34,38 +48,43 @@ const Home = () => {
 
   return (
     <Fragment>
-      <div className={overlayClasses.join(" ")}>
+      <div
+        className={overlayClasses.join(" ")}
+        style={{ display: isOverlay ? "block" : "none" }}
+      >
         <img src={HomeOverlay} className="overlay-image img-fluid" />
       </div>
 
-      {!isOverlay && (
-        <div className="home-div">
-          {isScreenSmaller && (
-            <LazyLoadImage
-              effect="blur"
-              height="auto"
-              src={`${process.env.PUBLIC_URL}/assets/image/profile-image.png`}
-              alt="hero-image"
-              className="img-fluid profile-image-small"
-            />
-          )}
+      <div
+        className="home-div"
+        style={{ display: isOverlay ? "none" : "block" }}
+      >
+        {isScreenSmaller && (
+          <img
+            height="auto"
+            src={`${process.env.PUBLIC_URL}/assets/image/profile-image.png`}
+            alt="hero-image"
+            className="img-fluid profile-image-small"
+            onLoad={imageLoadHandler}
+          />
+        )}
 
-          <div className="home-text">
-            <div className="home-text-name">Shashank Mishra</div>
-            <div className="home-profession">
-              <span>&lt;</span> A Web Developer <span>&gt;</span>
-            </div>
+        <div className="home-text">
+          <div className="home-text-name">Shashank Mishra</div>
+          <div className="home-profession">
+            <span>&lt;</span> A Web Developer <span>&gt;</span>
           </div>
-
-          {!isScreenSmaller && (
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/image/profile-image.png`}
-              alt="hero-image"
-              className="profile-image-large"
-            />
-          )}
         </div>
-      )}
+
+        {!isScreenSmaller && (
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/image/profile-image.png`}
+            alt="hero-image"
+            className="profile-image-large"
+            onLoad={imageLoadHandler}
+          />
+        )}
+      </div>
     </Fragment>
   );
 };
