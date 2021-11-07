@@ -4,12 +4,13 @@ import emailjs from "emailjs-com";
 import { useState, useEffect, Fragment } from "react";
 import { Form, Col } from "react-bootstrap";
 import ContactOverlay from "../../assets/svg/connect.svg";
-import { Button } from "react-bootstrap";
+import { Button, Spinner } from "react-bootstrap";
 import "../../Overlay.css";
 import EmailModal from "../EmailModal/EmailModal";
 
 const Contact = () => {
   const [isOverlay, setIsOverlay] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const overlayClasses = ["overlay"];
 
   const [details, setDetails] = useState({
@@ -49,7 +50,7 @@ const Contact = () => {
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     emailjs
       .sendForm(
         "service_pop5fen",
@@ -60,14 +61,17 @@ const Contact = () => {
       .then(
         (result) => {
           setShowModal({ visible: true, state: "success" });
+          setIsLoading(false);
         },
         (error) => {
           setShowModal({ visible: true, state: "error" });
+          setIsLoading(false);
         }
       );
     setDetails({ fName: "", lName: "", email: "", msg: "" });
   };
 
+  console.log(isLoading);
   useEffect(() => {
     setTimeout(() => {
       setIsOverlay(false);
@@ -81,6 +85,19 @@ const Contact = () => {
       "https://drive.google.com/uc?export=download&id=1KY8jBorPMtAilV1YgjtkH8HhHiSrX5rF"
     );
   };
+
+  const buttonLoadingComponent = (
+    <Fragment>
+      <span>Please wait </span>&nbsp;&nbsp;
+      <Spinner
+        as="span"
+        animation="border"
+        size="sm"
+        role="status"
+        aria-hidden="true"
+      />
+    </Fragment>
+  );
 
   return (
     <Fragment>
@@ -136,14 +153,13 @@ const Contact = () => {
               </a>
             </div>
             <div className="form-wrapper">
-              <Form onSubmit={formSubmitHandler}>
+              <Form onSubmit={formSubmitHandler} autocomplete="off">
                 <Form.Row>
                   <Form.Group as={Col} md={12} lg={6}>
                     <Form.Label className="text-white">First Name</Form.Label>
                     <Form.Control
                       type="text"
                       name="fNameInput"
-                      autocomplete="false"
                       required
                       placeholder="Enter first name"
                       onChange={detailChangeHandler}
@@ -156,7 +172,6 @@ const Contact = () => {
                     <Form.Control
                       type="text"
                       name="lNameInput"
-                      autoComplete={false}
                       required
                       placeholder="Enter last name"
                       onChange={detailChangeHandler}
@@ -181,7 +196,6 @@ const Contact = () => {
                   <Form.Label className="text-white">Your message</Form.Label>
                   <Form.Control
                     as="textarea"
-                    autoComplete={false}
                     required
                     name="msgInput"
                     rows={5}
@@ -197,7 +211,7 @@ const Contact = () => {
                       className="fifth-heading send-btn"
                       type="submit"
                     >
-                      Send Details
+                      {!isLoading ? "Send Details" : buttonLoadingComponent}
                     </Button>
                   </div>
                   <div className="col-xs-12 col-sm-6 mb-3 d-flex justify-content-center">

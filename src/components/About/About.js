@@ -35,7 +35,7 @@ const About = () => {
                 <div className="about-me-div">
                   <ul className="about-list paragraph-large">
                     <li>
-                      I am a sophomore student at J.S.S Academy Of Technical
+                      I am a junior student at J.S.S Academy Of Technical
                       Education, Noida.
                     </li>
                     <hr className="divider-line"></hr>
@@ -48,7 +48,7 @@ const About = () => {
                       I love working wih applications and interfaces therefore I
                       am highly interested in application development.
                     </li>
-                    <hr className="divider-line"></hr>
+                    <hr className="divider-line "></hr>
                     <li>
                       I am proficient with programming skills and have design
                       skills as well.
