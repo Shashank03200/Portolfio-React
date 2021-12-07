@@ -12,7 +12,7 @@ const Sidebar = () => {
   };
 
   const resumeURL =
-    "https://drive.google.com/uc?export=download&id=1KY8jBorPMtAilV1YgjtkH8HhHiSrX5rF";
+    "https://drive.google.com/file/d/16pnBhtg908CoWDapLsHcMsXVXdYDlF3i/view?usp=sharing";
 
   return (
     <>

@@ -1,8 +1,8 @@
 export const projectList = [
   {
     title: "Social Media App",
-    image: "Blog App SS.jpg", //todo: Change this Hehe
-    desc: `It is a facebook like full stack MERN Application.
+    image: "SocialMedia.png", //todo: Change this Hehe
+    desc: `It is a instagram like full stack MERN Application.
         It has all the essential features such as user account authentication, user timeline.
         There are other features also such as ability to like and comment a post.
         You can also follow and unfollow other users.`,

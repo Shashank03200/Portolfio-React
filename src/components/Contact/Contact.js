@@ -1,5 +1,6 @@
 import "./Contact.css";
 import emailjs from "emailjs-com";
+import { config } from "dotenv";
 
 import { useState, useEffect, Fragment } from "react";
 import { Form, Col } from "react-bootstrap";
@@ -7,6 +8,8 @@ import ContactOverlay from "../../assets/svg/connect.svg";
 import { Button, Spinner } from "react-bootstrap";
 import "../../Overlay.css";
 import EmailModal from "../EmailModal/EmailModal";
+
+config();
 
 const Contact = () => {
   const [isOverlay, setIsOverlay] = useState(true);
@@ -19,6 +22,7 @@ const Contact = () => {
     email: "",
     msg: "",
   });
+
   const [showModal, setShowModal] = useState({
     visible: false,
     state: "error",
@@ -50,24 +54,22 @@ const Contact = () => {
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
+
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const userId = process.env.REACT_APP_EMAILJS_USER_ID;
+    console.log(serviceId, templateId, userId);
     setIsLoading(true);
-    emailjs
-      .sendForm(
-        "service_pop5fen",
-        "template_i5pa4pu",
-        e.target,
-        "user_5Eh7IjrH9GAthaiZaMW4c"
-      )
-      .then(
-        (result) => {
-          setShowModal({ visible: true, state: "success" });
-          setIsLoading(false);
-        },
-        (error) => {
-          setShowModal({ visible: true, state: "error" });
-          setIsLoading(false);
-        }
-      );
+    emailjs.sendForm(serviceId, templateId, e.target, userId).then(
+      (result) => {
+        setShowModal({ visible: true, state: "success" });
+        setIsLoading(false);
+      },
+      (error) => {
+        setShowModal({ visible: true, state: "error" });
+        setIsLoading(false);
+      }
+    );
     setDetails({ fName: "", lName: "", email: "", msg: "" });
   };
 
@@ -82,7 +84,7 @@ const Contact = () => {
 
   const cvDownloadHandler = () => {
     window.open(
-      "https://drive.google.com/uc?export=download&id=1KY8jBorPMtAilV1YgjtkH8HhHiSrX5rF"
+      "https://drive.google.com/file/d/16pnBhtg908CoWDapLsHcMsXVXdYDlF3i/view?usp=sharing"
     );
   };
 
@@ -153,7 +155,7 @@ const Contact = () => {
               </a>
             </div>
             <div className="form-wrapper">
-              <Form onSubmit={formSubmitHandler} autocomplete="off">
+              <Form onSubmit={formSubmitHandler} autoComplete="off">
                 <Form.Row>
                   <Form.Group as={Col} md={12} lg={6}>
                     <Form.Label className="text-white">First Name</Form.Label>
