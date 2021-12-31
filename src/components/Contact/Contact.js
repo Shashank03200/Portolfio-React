@@ -84,7 +84,7 @@ const Contact = () => {
 
   const cvDownloadHandler = () => {
     window.open(
-      "https://drive.google.com/file/d/16pnBhtg908CoWDapLsHcMsXVXdYDlF3i/view?usp=sharing"
+      "https://drive.google.com/file/d/18GMi4yLQSE7d4-xQoilEKDkfPOH2RSoc/view?usp=sharing"
     );
   };
 

@@ -1,7 +1,7 @@
 .project-card {
   background-color: var(--primary);
   border: 2px solid var(--third);
-  min-height: 450px;
+  min-height: 500px;
   max-width: 340px;
   border-radius: 10px;
 }
