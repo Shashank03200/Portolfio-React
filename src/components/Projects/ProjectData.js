@@ -26,7 +26,7 @@ export const projectList = [
   {
     title: "Weather App",
     image: "Weather App SC.jpg",
-    desc: "It is a web app using which a user can get the weather details of a particular city.  It is completely responsive and also stores the recent searches until the session is active. The wallpaper also changes depending upon the weather conditions. It is build using Node.js and EJS along with API such as OpenWeatherAPI and UnsplashAPI.",
+    desc: "It is a web app using which a user can get the weather details of a particular city.  It is completely responsive and also stores the recent searches The wallpaper also changes depending upon the weather conditions. It is build using Node.js and EJS along with API such as OpenWeatherAPI and UnsplashAPI.",
     repositoryUrl: "https://github.com/Shashank03200/weather-mobile-app",
     launchUrl: "https://boiling-wildwood-56439.herokuapp.com/",
   },
