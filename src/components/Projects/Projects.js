@@ -2,14 +2,17 @@ import "./Projects.css";
 import { useState, Fragment, useRef } from "react";
 
 import ProjectCard from "./ProjectCard";
+import Zoom from "react-reveal/Zoom";
 import { projectList } from "./ProjectData";
-import ProjectOverlay from "../../assets/svg/projects.svg";
+import ProjectOverlay from "../../assets/svg/projects.png";
 
 import "../../Overlay.css";
 
 const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
+
   const overlayClasses = ["overlay"];
+
   const counter = useRef(0);
 
   const imageLoaded = () => {

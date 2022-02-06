@@ -1,21 +1,15 @@
 export const projectList = [
   {
-    title: "Social Media App",
-    image: "SocialMedia.png", //todo: Change this Hehe
-    desc: `It is a full stack Soical Media  Application built with MERN stack technology.
+    title: "J Verse",
+    image: "Jverse.jpg", //todo: Change this Hehe
+    desc: `It is a full stack Social Media  Application built with MERN stack technology.
         It has all the essential features such as user account authentication, user timeline.
         There are other features also such as ability to like and comment a post.
         You can also follow and unfollow other users.`,
     repositoryUrl: "https://github.com/Shashank03200/Social-React-2.0",
     launchUrl: "https://j-verse.herokuapp.com/",
   },
-  {
-    title: "Blog Website",
-    image: "Blog App SS.jpg",
-    desc: "It is a website which allows users to create their own posts and save it for future reference. It features complete authetication, Google Login, and login state persistence. It is created using React and Firebase.",
-    repositoryUrl: "https://github.com/Shashank03200/Blog-Site-React",
-    launchUrl: "https://blog-app-8981b.web.app/",
-  },
+
   {
     title: "Quiz Application",
     image: "quiz ss.png",

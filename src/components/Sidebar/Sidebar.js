@@ -11,8 +11,10 @@ const Sidebar = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  const resumeURL =
-    "https://drive.google.com/file/d/18GMi4yLQSE7d4-xQoilEKDkfPOH2RSoc/view?usp=sharing";
+  const cvDownloadHandler = () => {
+    const resumeLink = process.env.REACT_APP_RESUME_LINK;
+    window.open(resumeLink);
+  };
 
   return (
     <>
@@ -38,11 +40,7 @@ const Sidebar = () => {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav d-block  sidebar-list sidebar-links-wrapper fifth-heading">
-            <NavLink
-              className="nav-item "
-              activeClassName="list-item-active"
-              to="/"
-            >
+            <NavLink className="nav-item " to="/">
               <li
                 className="paragraph-large w-100"
                 onClick={sidedrawerToggleHandler}
@@ -50,14 +48,7 @@ const Sidebar = () => {
                 <i className="bi bi-house-door"></i>Home
               </li>
             </NavLink>
-            <NavLink
-              className="nav-item "
-              activeStyle={{
-                transform: "translateX(10px)",
-                "border-bottom": "3px solid var(--secondary)",
-              }}
-              to="/aboutme"
-            >
+            <NavLink className="nav-item " to="/aboutme">
               <li
                 className="paragraph-large w-100"
                 onClick={sidedrawerToggleHandler}
@@ -65,11 +56,7 @@ const Sidebar = () => {
                 <i className="bi bi-app"></i>About Me
               </li>
             </NavLink>
-            <NavLink
-              className="nav-item "
-              activeClassName="list-item-active"
-              to="/skills"
-            >
+            <NavLink className="nav-item " to="/skills">
               <li
                 className="paragraph-large w-100"
                 onClick={sidedrawerToggleHandler}
@@ -77,11 +64,7 @@ const Sidebar = () => {
                 <i className="bi bi-terminal"></i>Skills
               </li>
             </NavLink>
-            <NavLink
-              className="nav-item "
-              activeClassName="list-item-active"
-              to="/projects"
-            >
+            <NavLink className="nav-item " to="/projects">
               <li
                 className="paragraph-large w-100"
                 onClick={sidedrawerToggleHandler}
@@ -89,11 +72,7 @@ const Sidebar = () => {
                 <i className="bi bi-gear-wide-connected"></i>Projects
               </li>
             </NavLink>
-            <NavLink
-              className="nav-item "
-              activeClassName="list-item-active"
-              to="/contact"
-            >
+            <NavLink className="nav-item " to="/contact">
               <li
                 className="paragraph-large w-100"
                 onClick={sidedrawerToggleHandler}
@@ -106,9 +85,7 @@ const Sidebar = () => {
           <Button
             variant="info"
             className="fifth-heading sidebar-download-button d-flex align-self-start"
-            onClick={() => {
-              window.open(resumeURL);
-            }}
+            onClick={cvDownloadHandler}
           >
             <i className="bi bi-download"></i> &nbsp; Download CV{" "}
           </Button>

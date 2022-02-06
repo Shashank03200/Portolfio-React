@@ -1,176 +1,160 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-
-.App{
+.App {
   background-color: var(--background);
   z-index: 0;
 }
 
-.content{
-  margin-left:16rem;
-  
+.content {
+  margin-left: 16rem;
   position: relative;
-  overflow:auto;
+  overflow: auto;
   z-index: 1;
 }
 
-
-.first-heading{
-  font-family: 'Fira Sans', sans-serif !important;
+.first-heading {
+  font-family: "Fira Sans", sans-serif !important;
   font-weight: 500 !important;
   font-size: 48px !important;
   line-height: 52px !important;
 }
 
-.sec-heading{
-  font-family: 'Fira Sans', sans-serif;
+.sec-heading {
+  font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 34px !important;
 }
 
-.third-heading{
-  font-family: 'Fira Sans', sans-serif;
+.third-heading {
+  font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 28px !important;
 }
 
-.fourth-heading{
-  font-family: 'Fira Sans', sans-serif;
+.fourth-heading {
+  font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 24px !important;
 }
 
-.fifth-heading{
-  font-family: 'Fira Sans', sans-serif;
+.fifth-heading {
+  font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 20px !important;
 }
 
-.fifth-heading{
-  font-family: 'Fira Sans', sans-serif;
+.fifth-heading {
+  font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 18px !important;
 }
 
-.sixth-heading{
-  font-family: 'Fira Sans', sans-serif;
+.sixth-heading {
+  font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 16px !important;
 }
 
-
-
-.paragraph-large{
-  font-family: 'Open Sans', sans-serif;
+.paragraph-large {
+  font-family: "Open Sans", sans-serif;
   font-size: 16px !important;
   font-weight: 400;
 }
 
-.para-small{
-  font-family: 'Open Sans', sans-serif;
+.para-small {
+  font-family: "Open Sans", sans-serif;
   font-size: 14px !important;
   font-weight: 400;
 }
 
-.text-small{
-  font-family: 'Open Sans', sans-serif;
+.text-small {
+  font-family: "Open Sans", sans-serif;
   font-size: 10px !important;
   font-weight: 400;
 }
 
-:root{
-  --primary:#000000;
-  --secondary:#49BEB7;
-  --third:#BADFDB;
-  --fourth:#FF8A5C;
-  --background:#171717;
+:root {
+  --primary: #000000;
+  --secondary: #49beb7;
+  --third: #badfdb;
+  --fourth: #ff8a5c;
+  --background: #171717;
 }
 
-@media screen and (max-width:768px) {
-  .App{
+@media screen and (max-width: 768px) {
+  .App {
     margin-left: 0rem;
   }
-  
 }
 
-@media (max-width:992px )and ( min-width :450px ){
-  
-
-  .first-heading{
+@media (max-width: 992px) and (min-width: 450px) {
+  .first-heading {
     font-size: 42px !important;
     line-height: 48px !important;
   }
 
-  .sec-heading{
-    font-size:30px !important;
+  .sec-heading {
+    font-size: 30px !important;
   }
 
-  .third-heading{
+  .third-heading {
     font-size: 24px !important;
   }
 
-  .fourth-heading{
+  .fourth-heading {
     font-size: 20px !important;
   }
 
-  .fifth-heading{
+  .fifth-heading {
     font-size: 18px !important;
   }
 
-  .sixth-heading{
-    font-size:16px !important;
+  .sixth-heading {
+    font-size: 16px !important;
   }
-
-
-
-  
 }
 
-@media (max-width:450px ){
-  
-  .first-heading{
+@media (max-width: 450px) {
+  .first-heading {
     font-size: 36px !important;
     line-height: 40px !important;
   }
 
-  .sec-heading{
-    font-size:26px !important;
+  .sec-heading {
+    font-size: 26px !important;
   }
 
-  .third-heading{
+  .third-heading {
     font-size: 20px !important;
   }
 
-  .fourth-heading{
+  .fourth-heading {
     font-size: 18px !important;
   }
 
-  .sixth-heading{
-    font-size:12px !important;
+  .sixth-heading {
+    font-size: 12px !important;
   }
 
-  .container{
+  .container {
     width: 100% !important;
   }
 
-  .paragraph-large{
-    font-family: 'Open Sans', sans-serif;
+  .paragraph-large {
+    font-family: "Open Sans", sans-serif;
     font-size: 15px !important;
-    text-align: justify ;
+    text-align: justify;
     font-weight: 400;
   }
-
-  
 }
 
-@media screen and (max-width:992px) {
-  .content{
+@media screen and (max-width: 992px) {
+  .content {
     margin-left: 0;
-    z-index:0;
+    z-index: 0;
   }
 }

@@ -58,7 +58,7 @@ const Contact = () => {
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const userId = process.env.REACT_APP_EMAILJS_USER_ID;
-    console.log(serviceId, templateId, userId);
+
     setIsLoading(true);
     emailjs.sendForm(serviceId, templateId, e.target, userId).then(
       (result) => {
@@ -83,9 +83,8 @@ const Contact = () => {
   if (!isOverlay) overlayClasses.push("overlay-close");
 
   const cvDownloadHandler = () => {
-    window.open(
-      "https://drive.google.com/file/d/18GMi4yLQSE7d4-xQoilEKDkfPOH2RSoc/view?usp=sharing"
-    );
+    const resumeLink = process.env.REACT_APP_RESUME_LINK;
+    window.open(resumeLink);
   };
 
   const buttonLoadingComponent = (
@@ -166,6 +165,7 @@ const Contact = () => {
                       placeholder="Enter first name"
                       onChange={detailChangeHandler}
                       value={details.fName}
+                      disabled={isLoading}
                     />
                   </Form.Group>
 
@@ -178,6 +178,7 @@ const Contact = () => {
                       placeholder="Enter last name"
                       onChange={detailChangeHandler}
                       value={details.lName}
+                      disabled={isLoading}
                     />
                   </Form.Group>
                 </Form.Row>
@@ -191,6 +192,7 @@ const Contact = () => {
                     placeholder="Your email here"
                     onChange={detailChangeHandler}
                     value={details.email}
+                    disabled={isLoading}
                   />
                 </Form.Group>
 
@@ -203,6 +205,7 @@ const Contact = () => {
                     rows={5}
                     onChange={detailChangeHandler}
                     value={details.msg}
+                    disabled={isLoading}
                   />
                 </Form.Group>
 
@@ -212,6 +215,7 @@ const Contact = () => {
                       variant="success"
                       className="fifth-heading send-btn"
                       type="submit"
+                      disabled={isLoading}
                     >
                       {!isLoading ? "Send Details" : buttonLoadingComponent}
                     </Button>

@@ -10,7 +10,7 @@
 .overlay-image {
   width: 80%;
   height: 100vh;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .overlay-close {

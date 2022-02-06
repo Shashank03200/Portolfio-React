@@ -64,6 +64,10 @@
   /* border-right: 4px solid var(--secondary); */
 }
 
+.pageNavLinkActive {
+  border-bottom: 3px solid var(--secondary);
+}
+
 .sidebar-list img {
   margin-right: 14px;
 }
