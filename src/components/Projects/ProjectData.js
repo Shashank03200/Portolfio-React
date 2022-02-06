@@ -6,7 +6,7 @@ export const projectList = [
         It has all the essential features such as user account authentication, user timeline.
         There are other features also such as ability to like and comment a post.
         You can also follow and unfollow other users.`,
-    repositoryUrl: "https://github.com/Shashank03200/Social-React-2.0",
+    repositoryUrl: "https://github.com/Shashank03200/JVerse",
     launchUrl: "https://j-verse.herokuapp.com/",
   },
 
